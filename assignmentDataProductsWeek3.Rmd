@@ -1,0 +1,20 @@
+---
+title: "Assignment week 3 for course Developing Data Products – Coursera"
+author: "G.A. Pagani"
+date: "March 20, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Example of plot with Plotly
+
+
+```{r, echo=FALSE, message=FALSE}
+library(plotly)
+plot_ly(data = mtcars, x=~hp, y=~mpg, color = ~as.factor(cyl), mode = "markers") %>% layout( title = "Car dependency horse power, miles per gallon and number of cylinders")
+```
+
